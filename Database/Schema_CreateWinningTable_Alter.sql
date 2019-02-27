@@ -1,0 +1,8 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE INDEX IX_tblWinning_FkPrize ON [ExtraLife2018].[tblWinning] (fkPrize); 
+GO

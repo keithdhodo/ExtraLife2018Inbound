@@ -1,0 +1,15 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [ExtraLife2018].[tblPrizes](
+    [pkPrize] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    [PrizeDesc] VARCHAR(500) NOT NULL,
+    [PrizeDonor] VARCHAR(200) NOT NULL DEFAULT('Not Recorded'),
+    [fkPrizeAffiliation] INT NOT NULL DEFAULT (1),
+    [fkPrizeLevel] INT NOT NULL DEFAULT(1),
+    [PrizePicture] VARBINARY(MAX) NULL,
+) ON [PRIMARY]
+GO

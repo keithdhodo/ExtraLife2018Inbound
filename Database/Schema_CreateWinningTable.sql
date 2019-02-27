@@ -1,0 +1,20 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [ExtraLife2018].[tblWinning](
+    [pkWinning] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    [fkRaffleEntry] INT NOT NULL,
+    [DonorName] VARCHAR(200) NOT NULL,
+    [Affiliation] VARCHAR(150) NOT NULL DEFAULT (1),
+    [ELMEmberID] VARCHAR(255) NOT NULL,
+    [TeamMember] VARCHAR(150) NOT NULL,
+    [fkPrize] INT NOT NULL,
+    [RaffleItem] VARCHAR(500) NOT NULL,
+    [SoccerSpecific] BIT NOT NULL,
+    [WinningTimeStamp] DATETIME NOT NULL DEFAULT(GETDATE()),
+    [IsDeclined] BIT NOT NULL DEFAULT(0)
+) ON [PRIMARY]
+GO
